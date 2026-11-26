@@ -51,4 +51,4 @@ Running with the default thresholds (`P/B <= 2.0`, `P/S <= 2.0`, `D/E <= 1.0`, `
 - [x] Export screened results to `output/screened_stocks.csv`
 
 ### Schedule Features
-- [ ] Export interactive TradingView Lightweight Charts HTML report (`output/report.html`)
+- [x] Export interactive TradingView Lightweight Charts HTML report (`output/report.html`)
