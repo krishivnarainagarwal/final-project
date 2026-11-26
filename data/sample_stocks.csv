@@ -1,0 +1,16 @@
+ticker,company_name,market_cap,book_value,revenue,net_income,total_debt
+VALU,"Apex Manufacturing, Inc.",450.0,320.0,600.0,48.0,110.0
+MCRB,Midwest Bearings Corp,180.0,150.0,240.0,22.0,45.0
+SOLV,Silverline Logistics,310.0,210.0,410.0,35.0,90.0
+HLTH,Beacon Diagnostics,920.0,180.0,290.0,42.0,60.0
+GRWT,NovaCloud Systems,2400.0,300.0,450.0,15.0,120.0
+INDU,Harbor Steelworks,520.0,480.0,890.0,65.0,210.0
+RETL,Summit Outdoor Gear,275.0,190.0,510.0,28.0,85.0
+TECH,Vanguard Photonics,1350.0,260.0,380.0,55.0,40.0
+ENER,Prairie Wind Energy,640.0,410.0,520.0,62.0,390.0
+FOOD,Heartland Grain Co,390.0,310.0,720.0,44.0,95.0
+CHIP,Silicon Micro Foundry,880.0,290.0,420.0,71.0,115.0
+BANK,First Regional Bancorp,510.0,460.0,310.0,58.0,180.0
+DIST,Distressed Retail Group,95.0,0.0,340.0,-25.0,290.0
+BAD1,Corrupted Data Corp,210.0,140.0,N/A,12.0,50.0
+BAD2,Incomplete Filing LLC,160.0,110.0,200.0,,40.0
