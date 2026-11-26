@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class Main {
     private static final String DEFAULT_INPUT_PATH = "data/sample_stocks.csv";
-    private static final String DEFAULT_OUTPUT_PATH = "output/screened_stocks.csv";
+    private static final String DEFAULT_CSV_OUTPUT = "output/screened_stocks.csv";
+    private static final String DEFAULT_HTML_OUTPUT = "output/report.html";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -29,7 +30,8 @@ public class Main {
         CsvReader csvReader = new CsvReader();
         RatioCalculator calculator = new RatioCalculator();
         StockScreener screener = new StockScreener();
-        CsvExporter exporter = new CsvExporter();
+        CsvExporter csvExporter = new CsvExporter();
+        ChartExporter chartExporter = new ChartExporter();
 
         try {
             List<Stock> stocks = csvReader.readStocks(inputPath);
@@ -42,8 +44,11 @@ public class Main {
             List<Stock> screened = screener.screen(stocks, maxPB, maxPS, maxDE, minMargin);
 
             printSummary(screened);
-            exporter.export(screened, DEFAULT_OUTPUT_PATH);
-            System.out.println("\nCSV report saved to: " + DEFAULT_OUTPUT_PATH);
+            csvExporter.export(screened, DEFAULT_CSV_OUTPUT);
+            chartExporter.exportHtmlReport(screened, DEFAULT_HTML_OUTPUT);
+
+            System.out.println("\nCSV report saved to:  " + DEFAULT_CSV_OUTPUT);
+            System.out.println("HTML chart saved to:  " + DEFAULT_HTML_OUTPUT);
         } catch (Exception e) {
             System.err.println("Error processing stocks: " + e.getMessage());
         }
